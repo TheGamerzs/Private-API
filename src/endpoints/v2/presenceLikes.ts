@@ -44,6 +44,6 @@ function UpdateLikes() {
 	});
 }
 
-setTimeout(function () {
+setInterval(function () {
 	UpdateLikes();
 }, 300000);
