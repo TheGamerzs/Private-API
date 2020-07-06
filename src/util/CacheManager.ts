@@ -9,6 +9,7 @@ export async function initCache() {
 	await Promise.all(
 		cacheBuilder([
 			"presences",
+			{ name: "presenceInfo", expires: 5 * 1000 },
 			"langFiles",
 			{ name: "credits", expires: 5 * 1000 },
 			"science",
@@ -22,7 +23,7 @@ export async function initCache() {
 			"benefits",
 			"downloads",
 			"alphaUsers",
-			"betaUsers"
+			"betaUsers",
 		])
 	);
 
@@ -37,8 +38,8 @@ export async function initCache() {
 function cacheBuilder(
 	cachesToGet: Array<string | { name: string; expires: number }>
 ) {
-	return cachesToGet.map(cTG => {
-		return new Promise(async resolve => {
+	return cachesToGet.map((cTG) => {
+		return new Promise(async (resolve) => {
 			// @ts-ignore
 			if (cache.isExpired(cTG.name || cTG))
 				cache.set(
