@@ -69,6 +69,7 @@ const handler: RouteHandlerMethod<
 	})
 		.then((result) => {
 			//Send confirmation email
+			//Add Printful order info to order doc
 			res.send(result);
 		})
 		.catch((err) => {
