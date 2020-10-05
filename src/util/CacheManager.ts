@@ -15,7 +15,7 @@ export async function initCache() {
 			{ name: "credits", expires: 5 * 1000 },
 			"science",
 			"versions",
-			"merch",
+			"merchProducts",
 			"merchPromotions",
 			"ffUpdates",
 			"changelog",
@@ -26,7 +26,7 @@ export async function initCache() {
 			"benefits",
 			"downloads",
 			"alphaUsers",
-			"betaUsers",
+			"betaUsers"
 		])
 	);
 
@@ -36,8 +36,8 @@ export async function initCache() {
 function cacheBuilder(
 	cachesToGet: Array<string | { name: string; expires: number }>
 ) {
-	return cachesToGet.map(cTG => {
-		return new Promise(async resolve => {
+	return cachesToGet.map((cTG) => {
+		return new Promise(async (resolve) => {
 			// @ts-ignore
 			if (cache.isExpired(cTG.name || cTG))
 				cache.set(

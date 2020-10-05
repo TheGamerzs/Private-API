@@ -2,10 +2,10 @@ import { RouteGenericInterface, RouteHandlerMethod } from "fastify/types/route";
 import { IncomingMessage, Server, ServerResponse } from "http";
 import { cache } from "../../../index";
 
-let products = cache.get("merch");
+let products = cache.get("merchProducts");
 
 cache.on("update", (_, data) => (products = data), {
-	only: "merch"
+	only: "merchProducts"
 });
 
 let categories = [];
@@ -20,7 +20,7 @@ const handler: RouteHandlerMethod<
 	unknown
 > = async (req, res) => {
 	products
-		.filter(document => document.title === "categories")[0]
+		.filter((document) => document.title === "categories")[0]
 		["list"].forEach((category, index) => {
 			categories[index] = category;
 			types[category] = [];
@@ -28,9 +28,9 @@ const handler: RouteHandlerMethod<
 
 	products
 		.filter(
-			document => document.category != undefined && document.status === "Live"
+			(document) => document.category != undefined && document.status === "Live"
 		)
-		.forEach(product_info => {
+		.forEach((product_info) => {
 			types[product_info.category].push(product_info);
 		});
 

@@ -156,12 +156,26 @@
 			"handler": "printful/products"
 		},
 		{
-			"path": ["/v2/payment/promo/:code", "/v2/payment/promo/:code/:token"],
+			"method": "post",
+			"path": "/v2/payment/createTransaction",
+			"handler": "payment/createTransaction"
+		},
+		{
+			"method": "post",
+			"path": "/v2/payment/processTransaction",
+			"handler": "payment/processTransaction"
+		},
+		{
+			"path": "/v2/payment/orderProducts/:transaction_id",
+			"handler": "payment/orderProducts"
+		},
+		{
+			"path": "/v2/payment/promo/:code",
 			"handler": "payment/promo"
 		},
 		{
-			"path": "/v2/payment/processTransaction",
-			"handler": "payment/processTransaction"
+			"path": "/v2/payment/userPromo/:code/:token",
+			"handler": "payment/userPromo"
 		},
 		{
 			"path": "/v2/printful/countries",

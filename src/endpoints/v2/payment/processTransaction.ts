@@ -1,8 +1,11 @@
 import { RouteGenericInterface, RouteHandlerMethod } from "fastify/types/route";
 import { IncomingMessage, Server, ServerResponse } from "http";
+import { pmdDB } from "../../../db/client";
+
+let orders = pmdDB.collection("merchOrder");
 var braintree = require("braintree");
 
-var gateway = braintree.connect({
+var gateway = new braintree.BraintreeGateway({
 	environment: braintree.Environment.Sandbox,
 	merchantId: process.env.BrainTree_Merchant_Id,
 	publicKey: process.env.BrainTree_Public_Key,
@@ -16,22 +19,27 @@ const handler: RouteHandlerMethod<
 	RouteGenericInterface,
 	unknown
 > = async (req, res) => {
+	if (
+		!req.body["order_id"] &&
+		!req.body["payment_method_nonce"] &&
+		!req.body["device_data"]
+	)
+		return res.status(500);
+
+	const order = await orders.findOne({
+		order_id: req.body["order_id"]
+	});
+	if (order.paid.transaction_id !== "" || order.paid.transaction_time !== "")
+		return res.status(500);
+
 	gateway.transaction.sale(
 		{
-			amount: "5.00",
-			paymentMethodNonce: "nonce-from-the-client",
-			options: { submitForSettlement: false },
-			billing: {
-				firstName: "Paul",
-				lastName: "Smith",
-				company: "Braintree",
-				streetAddress: "1 E Main St",
-				extendedAddress: "Suite 403",
-				locality: "Chicago",
-				region: "IL",
-				postalCode: "60622",
-				countryCodeAlpha2: "US"
-			}
+			amount: (order.price.total / 100).toFixed(2),
+			paymentMethodNonce: req.body["payment_method_nonce"],
+			//deviceData: req.body["device_data"],
+			options: { submitForSettlement: true },
+			billing: order.billing,
+			shipping: order.shipping
 		},
 		function (err, result) {
 			if (err) {
@@ -39,7 +47,22 @@ const handler: RouteHandlerMethod<
 				return;
 			}
 			if (result.success) {
-				res.send("Transaction ID: " + result.transaction.id);
+				orders.findOneAndUpdate(
+					{
+						order_id: req.body["order_id"]
+					},
+					{
+						$set: {
+							"paid.transaction_id": result.transaction.id,
+							"paid.transaction_time": Date.parse(
+								result.transaction.statusHistory[0].timestamp
+							).toString(),
+							"paid.paymentType": result.transaction.paymentInstrumentType,
+							"paid.status": result.transaction.status
+						}
+					}
+				);
+				res.send({ transaction_Id: result.transaction.id });
 			} else {
 				res.send(result.message);
 			}

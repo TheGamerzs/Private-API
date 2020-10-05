@@ -2,8 +2,8 @@ import { RouteGenericInterface, RouteHandlerMethod } from "fastify/types/route";
 import { IncomingMessage, Server, ServerResponse } from "http";
 import { pmdDB } from "../../../db/client";
 
-//* Define credits collection
-const merch = pmdDB.collection("merch");
+//* Define merch collection
+const merch = pmdDB.collection("merchProducts");
 
 //* Request Handler
 const handler: RouteHandlerMethod<
