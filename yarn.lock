@@ -200,13 +200,14 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-braintree@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/braintree/-/braintree-3.0.0.tgz#d11b6eff08a42fa952643d888796abdac5946085"
-  integrity sha512-uPexg5t+DnKfwUfXLuvVulMy9jE06A/GM2AbTr96gzDjI8L5yWc7XfBvidV2DwCGss3SinGQ9RO5UQNSnvljMQ==
+braintree@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/braintree/-/braintree-3.2.0.tgz#48528e4a95c1209bff80a3c185bb848990708a3a"
+  integrity sha512-ddQ9XSt28RaOP59ZwHXEcC2wxLeU7wC3nAfgnoncOatZfCJGT4TrGbtqT1QB+NFoH1Fwzh45Gad6x6mXGiN7mA==
   dependencies:
     "@braintree/wrap-promise" "2.1.0"
     dateformat "3.0.3"
+    user "0.0.0"
     xml2js "0.4.23"
 
 bson@^1.1.4:
@@ -1461,6 +1462,11 @@ uri-js@^4.2.2:
   integrity sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   dependencies:
     punycode "^2.1.0"
+
+user@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/user/-/user-0.0.0.tgz#f27f1b23fc511f2a8efa40db55cfba123824e02a"
+  integrity sha1-8n8bI/xRHyqO+kDbVc+6Ejgk4Co=
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
