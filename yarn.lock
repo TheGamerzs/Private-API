@@ -200,10 +200,10 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-braintree@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/braintree/-/braintree-3.0.0.tgz#d11b6eff08a42fa952643d888796abdac5946085"
-  integrity sha512-uPexg5t+DnKfwUfXLuvVulMy9jE06A/GM2AbTr96gzDjI8L5yWc7XfBvidV2DwCGss3SinGQ9RO5UQNSnvljMQ==
+braintree@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/braintree/-/braintree-3.2.1.tgz#3917cda5802f6ef57a778835f446ff75e52cc5bf"
+  integrity sha512-cA+Km1M4UMjj9YLGu3Rwp0LqdXEXcigVRgKISPWFLthG39/NJaohYAPjT6wD3U3YiFkNUANO5xwYeG6UXknelA==
   dependencies:
     "@braintree/wrap-promise" "2.1.0"
     dateformat "3.0.3"
