@@ -200,13 +200,13 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-braintree@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/braintree/-/braintree-3.0.0.tgz#d11b6eff08a42fa952643d888796abdac5946085"
-  integrity sha512-uPexg5t+DnKfwUfXLuvVulMy9jE06A/GM2AbTr96gzDjI8L5yWc7XfBvidV2DwCGss3SinGQ9RO5UQNSnvljMQ==
+braintree@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/braintree/-/braintree-3.2.2.tgz#0bec572f5df36773560102f0c297dd91696f6bbc"
+  integrity sha512-OY57WFV9+JcMV16OULsIZ6eKgyEySEuG+gXpcjd5MBJbOq34xcRPwxCLighmVRdA+M64iUpcW+ptNDolumGpgw==
   dependencies:
     "@braintree/wrap-promise" "2.1.0"
-    dateformat "3.0.3"
+    dateformat "4.5.1"
     xml2js "0.4.23"
 
 bson@^1.1.4:
@@ -281,10 +281,10 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-dateformat@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
-  integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
+dateformat@4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-4.5.1.tgz#c20e7a9ca77d147906b6dc2261a8be0a5bd2173c"
+  integrity sha512-OD0TZ+B7yP7ZgpJf5K2DIbj3FZvFvxgFUuaqA/V5zTjAtAAXZ1E8bktHxmAGs4x5b7PflqA9LeQ84Og7wYtF7Q==
 
 debug@2.6.9:
   version "2.6.9"
