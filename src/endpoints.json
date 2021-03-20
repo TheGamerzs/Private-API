@@ -188,6 +188,10 @@
 		{
 			"path": "/v2/printful/productInfo/:id",
 			"handler": "printful/productInfo"
+		},
+		{
+			"path": "/v2/printful/webhook/:first/:second/:third/:fourth",
+			"handler": "printful/webhook"
 		}
 	]
 }
