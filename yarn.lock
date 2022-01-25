@@ -621,10 +621,10 @@ displayastree@^1.0.3:
   resolved "https://registry.yarnpkg.com/displayastree/-/displayastree-1.0.3.tgz#662db5495ff2b357ea1ddbbfd8e7fbe9f8119325"
   integrity sha512-cpUYNudvG8G1H9pE4SpQKmCIei2DKMtE+PjqB/FqDdtWQtEuDgWY+cxkRQ9BcUEUb5lL2mYqb2hvoeUx2kOq0g==
 
-dotenv@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
-  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+dotenv@^14.3.0:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-14.3.0.tgz#40f537fe90e229d35361c66cf432903e0db49001"
+  integrity sha512-PCTcOQSXVo9FI1dB7AichJXMEvmiGCq0gnCpjfDUc8505uR+2MeLXWe+Ue4PN5UXa2isHSa78sr7L59fk+2mnQ==
 
 duplexer3@^0.1.4:
   version "0.1.4"
