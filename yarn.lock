@@ -831,12 +831,7 @@ fast-safe-stringify@^2.0.7:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
-fastify-error@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/fastify-error/-/fastify-error-0.3.0.tgz#08866323d521156375a8be7c7fcaf98df946fafb"
-  integrity sha512-Jm2LMTB5rsJqlS1+cmgqqM9tTs0UrlgYR7TvDT3ZgXsUI5ib1NjQlqZHf+tDK5tVPdFGwyq02wAoJtyYIRSiFA==
-
-fastify-error@^0.3.1:
+fastify-error@^0.3.0, fastify-error@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/fastify-error/-/fastify-error-0.3.1.tgz#8eb993e15e3cf57f0357fc452af9290f1c1278d2"
   integrity sha512-oCfpcsDndgnDVgiI7bwFKAun2dO+4h84vBlkWsWnz/OUK9Reff5UFoFl241xTiLeHWX/vU9zkDVXqYUxjOwHcQ==
@@ -1520,10 +1515,10 @@ memory-pager@^1.0.2:
   resolved "https://registry.yarnpkg.com/memory-pager/-/memory-pager-1.5.0.tgz#d8751655d22d384682741c972f2c3d6dfa3e66b5"
   integrity sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg==
 
-mercurius@^8.9.0:
-  version "8.11.2"
-  resolved "https://registry.yarnpkg.com/mercurius/-/mercurius-8.11.2.tgz#39ccf7ef869dcd9ac9cbc4708f7c8f507dcca617"
-  integrity sha512-n8xSfEDcuQBFiVdL1ScXUxM1iKTxN3eVkVvK8+nF4eGguEnJPAXq/+dJrFalrhoLQ7xAZJ7qKwWeQlDzdVHDhQ==
+mercurius@^8.12.2:
+  version "8.12.2"
+  resolved "https://registry.yarnpkg.com/mercurius/-/mercurius-8.12.2.tgz#78a94c764d987f9efb9ade43ff4c79891131fe91"
+  integrity sha512-3bLLjGapSsYStSDNgcGOkz2biSzHIHVCMi7ecGBVXLS8uBGCb1dlruYS83rq74AhOLdpWMwWReZ6jqyuc8SZNw==
   dependencies:
     "@types/isomorphic-form-data" "^2.0.0"
     events.on "^1.0.1"
@@ -2012,12 +2007,7 @@ saslprep@^1.0.0:
   dependencies:
     sparse-bitfield "^3.0.3"
 
-secure-json-parse@^2.0.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/secure-json-parse/-/secure-json-parse-2.3.1.tgz#908aa5e806e223ff8d179d37ad95c2433f5f147d"
-  integrity sha512-5uGhQLHSC9tVa7RGPkSwxbZVsJCZvIODOadAimCXkU1aCa1fWdszj2DktcutK8A7dD58PoRdxTYiy0jFl6qjnw==
-
-secure-json-parse@^2.4.0:
+secure-json-parse@^2.0.0, secure-json-parse@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/secure-json-parse/-/secure-json-parse-2.4.0.tgz#5aaeaaef85c7a417f76271a4f5b0cc3315ddca85"
   integrity sha512-Q5Z/97nbON5t/L/sH6mY2EacfjVGwrCcSi5D3btRO2GZ8pf1K1UN7Z9H5J57hjVU2Qzxr1xO+FmBhOvEkzCMmg==
