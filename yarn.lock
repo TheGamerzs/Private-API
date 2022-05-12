@@ -1557,10 +1557,10 @@ micromatch@^4.0.2:
     braces "^3.0.1"
     picomatch "^2.0.5"
 
-middie@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/middie/-/middie-5.2.0.tgz#0d8a4835c0d08a0a0c611a932e755b7376f60c61"
-  integrity sha512-QSrtYKyeGfdrsUzpwo6/NtPeac56CkPJpsVbGRaPE+7ekfrcfbdobjFiUFELYtDCUJpmLsXlOZtM4JE8YPvCcQ==
+middie@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/middie/-/middie-6.1.0.tgz#c44a5934ec7602c777a7a4c046b7ea94099b2ec8"
+  integrity sha512-akpWXv9QFJ3mXq26kiej7nI4EiID1zEVLq5dxRbrkESMUNNOdTFJjt7Uk9mkcR7D9oR+6km3l3Oah9uQof+Uig==
   dependencies:
     fastify-plugin "^3.0.0"
     path-to-regexp "^6.1.0"
